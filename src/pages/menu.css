@@ -1,0 +1,63 @@
+@media screen and (min-device-width:330px) and (max-device-width:900px){
+    .car{
+        display:flex !important;
+        flex-direction:column !important;
+        justify-content:center !important;
+        width:20% !important;
+        margin: 0 auto !important;
+        align-items: center !important;
+        margin-bottom:50px !important;
+        margin-top:10px !important;
+    }
+    .card{
+        width:350px !important;
+    }
+    .te{
+        display :flex !important;
+        flex-direction:column !important;
+        justify-content:center !important;
+        margin : 0 auto !important;
+        align-items:center !important;
+        margin-top:50px !important;
+        width:600px !important;
+    }
+    .in{
+        display :flex !important;
+        flex-direction:column !important;
+        justify-content:center !important;
+    }
+
+    .cake{
+        width:500px !important;
+    }
+    .ca{
+        display:flex !important;
+        flex-direction:column !important;
+        justify-content:center !important;
+        width:10% !important;
+        margin: 0 auto !important;
+        align-items: center !important;
+    }
+    .cc{
+        height:350px !important;
+        width:500px !important;
+    }
+    .pp{
+        height:250px !important;
+        width:500px !important;
+    }
+    .rr{
+        height:250px !important;
+        width:500px !important; 
+    }
+    .bu{
+        display:flex !important;
+        align-items:center !important;
+    }
+    .plus{
+        width:25% !important;
+    }
+    .minus{
+        width:25% !important;
+    }
+}

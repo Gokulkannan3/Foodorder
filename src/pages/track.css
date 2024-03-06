@@ -1,0 +1,52 @@
+.ProgressBar {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 300px;
+    width:500px !important;
+    margin-left:50px !important;
+  }
+  
+  .progress-label {
+    width: 80px !important;
+    height: 30px;
+    margin: 5px;
+  }
+  .progress-label {
+    white-space: nowrap;
+  }  
+
+@media screen and (min-device-width:250px) and (max-device-width:900px){
+    .co{
+        width:80% !important;
+        height:600px !important;
+        display:flex !important;
+        flex-direction:column !important;
+    }
+    .im{
+        width:100% !important;
+        height:100% !important;
+    }
+    .fi{
+        width:100% !important;
+        height:600px !important;
+        border-radius:18px !important;
+    }
+    .ProgressBar {
+        height: 300px !important;
+        width:65% !important;
+      }
+  
+      .progress-label {
+        width: 80px !important;
+        height: 30px !important;
+        margin: 5px !important;
+      }
+      .tick{
+        width:30px !important;
+        margin-left:10px !important;
+      }
+      .text{
+        font-size: 12px !important;
+        margin-bottom: 12px !important;
+      }
+}

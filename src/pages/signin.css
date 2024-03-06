@@ -1,0 +1,17 @@
+@media screen and (min-device-width:330px) and (max-device-width:900px){
+    .lot{
+        width:300px !important;
+        height:300px !important;
+        transform:translatex(10px) !important;
+    }
+    .close{
+        transform:translatey(-200px)!important;
+    }
+    .i{
+        width:20px !important;
+    }
+    .close{
+        width:50px !important;
+        height:50px !important;
+    }
+}

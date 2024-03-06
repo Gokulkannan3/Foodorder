@@ -1,0 +1,12 @@
+body,html{
+    overflow-x:hidden;
+}
+@media screen and (min-device-width:350px) and (max-device-width:800px){
+    .for{
+        width:80%;
+    }
+    .con{
+        font-size:15px !important;
+        transform:translate(-20px) !important;
+    }
+}
