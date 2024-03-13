@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navi';
 import axios from 'axios';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 export default function Profile() {
   const [userData, setUserData] = useState(null);
@@ -32,7 +34,14 @@ export default function Profile() {
   }, []);
 
   if (!userData) {
-    return <p>Loading...</p>;
+    return (
+      <Stack spacing={1}>
+        <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton variant="rectangular" width={210} height={60} />
+        <Skeleton variant="rounded" width={210} height={60} />
+      </Stack>
+    );
   }
 
   return (
@@ -40,17 +49,20 @@ export default function Profile() {
       <div className='fixed top-0 w-full'>
         <Navbar />
       </div> 
-      <div className='ca flex justify-center items-center min-h-screen text-black'>
-        <div className='w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4'>
+      <div className='h-full'>
+        <div className='flex justify-center text-3xl font-bold mt-44'>
+          <p>User Details</p>
+        </div>
+        <div className='flex justify-center mt-8'>
           {userData && (
-            <div className='bg-red-400 rounded-xl p-6 sm:p-8 md:p-10 lg:p-12 text-xl'>
-              <p className='mb-2'>
+            <div className='w-full md:w-3/ lg:w-1/2 xl:w-1/3 bg-gray-300 rounded-lg p-8'>
+              <p className='mb-2 text-xl'>
                 Name: {userData.firstname} {userData.lastname}
               </p>
-              <p className='mb-2'>Age: {userData.age}</p>
-              <p className='mb-2'>Email: {userData.email}</p>
-              <p className='mb-2'>Contact: {userData.contact}</p>
-              <p className='mb-2'>Address: {userData.address}</p>
+              <p className='mb-2 text-xl'>Age: {userData.age}</p>
+              <p className='mb-2 text-xl'>Email: {userData.email}</p>
+              <p className='mb-2 text-xl'>Contact: {userData.contact}</p>
+              <p className='mb-2 text-xl'>Address: {userData.address}</p>
             </div>
           )}
         </div>
