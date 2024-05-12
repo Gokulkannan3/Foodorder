@@ -26,4 +26,13 @@
     .rose{
         margin-bottom:60px !important;
     }
+    .fnav {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        items:center;
+        flex-direction: row;
+        gap:100px;
+        margin-left:-45px;
+      }
 }    

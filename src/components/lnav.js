@@ -10,8 +10,6 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-
 export default function Lnav() {
     const [state, setState] = React.useState({
         bottom: false
@@ -32,12 +30,12 @@ export default function Lnav() {
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
         >
-          <List>
-            {['Home','Signup'].map((text, index) => (
-              <ListItem key={text} disablePadding style={{ marginRight: '10px' }}>
+          <List className="text-center">
+            {['Home', 'Signup', 'About'].map((text, index) => (
+              <ListItem key={text} disablePadding className="mb-2">
                 <ListItemButton>
-                  <Link to={text === 'Home' ? '/' : `/${text.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit'}}>
-                    <ListItemText primary={text}></ListItemText>
+                  <Link to={text === 'Home' ? '/' : `/${text.toLowerCase()}`} className="text-black text-lg font-semibold">
+                    {text}
                   </Link>
                 </ListItemButton>
               </ListItem>
@@ -45,6 +43,8 @@ export default function Lnav() {
           </List>
         </Box>
       );
+      
+      
 
     return (
         <nav className='out bg-black h-32'>

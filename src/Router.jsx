@@ -12,6 +12,7 @@ import Admin from "./pages/admin";
 import Profile from "./pages/Profile";
 import Book from "./pages/book";
 import Track from "./pages/track"
+import Team from "./pages/Team";
 
 const AllRoutes = () =>{
     return(
@@ -28,6 +29,7 @@ const AllRoutes = () =>{
             <Route exact path="/pro" element={<Profile/>}/>
             <Route exact path="/book" element={<Book/>}/>
             <Route exact path="/track/:id" element={<Track/>}/>
+            <Route exact path="/team" element={<Team/>}/>
         </Routes> 
     )
 }

@@ -35,41 +35,47 @@ export default function Navbar(){
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
       >
-        <List>
-          <ListItem disablePadding style={{ marginRight: '10px' }}>
-              <ListItemButton>
-                  <Link to='/pro'>
-                      {userData && userData.firstname && (
-                        <ListItemText className="text-xl">{userData.username}</ListItemText>
-                      )}
-                  </Link>
-              </ListItemButton>
+        <List className="text-center">
+          <ListItem disablePadding className="mb-2">
+            <ListItemButton>
+              <Link to='/pro' className="text-black text-lg font-semibold">
+                {userData && userData.firstname && (
+                  <ListItemText className="text-xl">{userData.username}</ListItemText>
+                )}
+              </Link>
+            </ListItemButton>
           </ListItem>
-          <ListItem disablePadding style={{ marginRight: '10px' }}>
-              <ListItemButton>
-                  <Link to='/menu'>
-                        <ListItemText className="text-xl">Menu</ListItemText>
-                  </Link>
-              </ListItemButton>
+          <ListItem disablePadding className="mb-2">
+            <ListItemButton>
+              <Link to='/menu' className="text-black text-lg font-semibold">
+                <ListItemText className="text-xl">Menu</ListItemText>
+              </Link>
+            </ListItemButton>
           </ListItem>
-          <ListItem disablePadding style={{ marginRight: '10px' }}>
-              <ListItemButton>
-                  {userData ? (
-                      <ListItemText className='font-bold text-lg' onClick={handleLogout}>
-                          Logout
-                      </ListItemText>
-                  ) : (
-                      <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          <ListItemText className='font-bold text-xl'>
-                              Login
-                          </ListItemText>
-                      </Link>
-                  )}
-              </ListItemButton>
+          <ListItem disablePadding className="mb-2">
+            <ListItemButton>
+              <Link to='/about' className="text-black text-lg font-semibold hover:text-gray-300">
+                <ListItemText className="text-xl">About</ListItemText>
+              </Link>
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding className="mb-2">
+            <ListItemButton>
+              {userData ? (
+                <ListItemText className='text-black text-lg font-semibold cursor-pointer hover:text-gray-300' onClick={handleLogout}>
+                  Logout
+                </ListItemText>
+              ) : (
+                <Link to="/login" className="text-black text-lg font-semibold hover:text-gray-300" style={{ textDecoration: 'none' }}>
+                  <ListItemText className="text-xl">Login</ListItemText>
+                </Link>
+              )}
+            </ListItemButton>
           </ListItem>
         </List>
       </Box>
     );
+    
 
     useEffect(() => {
         const storedUserData = localStorage.getItem("userData");

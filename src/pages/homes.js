@@ -9,6 +9,9 @@ import cc from '../images/cc.png';
 import rr from '../images/rr.jpg';
 import './menu.css'
 import { useNavigate } from 'react-router-dom';
+import insta from '../images/instagram.png';
+import whatsapp from '../images/whatsapp.png';
+import mail from '../images/envelope.png';
 
 export default function Homes() {
   const navigate = useNavigate();
@@ -76,6 +79,25 @@ export default function Homes() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <footer className="footer footer-center p-10 bg-black text-red-500 rounded">
+          <nav className="fnav grid grid-flow-col gap-4">
+            <Link to={'/about'} className="link link-hover hover:text-white text-xl">About</Link>
+            <Link to={'/contact'} className="link link-hover hover:text-white text-xl">Contact</Link>
+            <Link to={'/team'} className="link link-hover hover:text-white text-xl">Team</Link>
+          </nav> 
+          <nav>
+            <div className="grid grid-flow-col gap-4">
+              <a href="https://www.instagram.com/innum_vai/"><img className='cursor-pointer' src={insta} alt='insta'/></a>
+              <a href='https://wa.me/9941269128'><img className='cursor-pointer' src={whatsapp} alt='insta'/></a>
+              <a href='mailto:innumvai@gmail.com'><img className='cursor-pointer' src={mail} alt='insta'/></a>
+            </div>
+          </nav> 
+          <aside>
+            <p>Copyright © 2024 - All right reserved by Innumvai</p>
+          </aside>
+        </footer>
       </div>
     </div>
   )

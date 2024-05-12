@@ -64,6 +64,7 @@ useEffect(() => {
                 <th>Amount</th>
                 <th>Update</th>
                 <th>Status</th>
+                <th>Delivery person</th>
               </tr>
             </thead>
             {order.length > 0 && (
@@ -85,6 +86,11 @@ useEffect(() => {
                         className='text-white font-bold text-xl h-12 w-24 rounded-lg bg-red-500 hover:bg-red-400 hover:text-black'
                     >Update</button></td>
                     <td>{val.status}</td>
+                    <td>
+                      <select>
+                        <option>Select</option>
+                      </select>
+                    </td>
                   </tr>
                 ))}
               </tbody>

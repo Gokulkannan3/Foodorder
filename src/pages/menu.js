@@ -18,6 +18,10 @@ import Modalt from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import insta from '../images/instagram.png';
+import whatsapp from '../images/whatsapp.png';
+import mail from '../images/envelope.png';
 
 const style = {
   position: 'absolute',
@@ -162,7 +166,7 @@ export default function Menu() {
         <Box sx={style} className='h-3/1'>
         <div className='flex justify-center items-center'>
           <div className="overflow-x-auto">
-            <table className="table table-zebra">
+            <table className="table table-zebra border-2 border-black">
               <thead className='bg-black text-white'>
                 <tr>
                   <th>Ingredient</th>
@@ -271,7 +275,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='cc' src={cc} alt="cc" onClick={handleOpen}/></figure>
           <div className="card-body">
-            <h2 className="card-title">Coffee!<p className='flex justify-end text-xl font-bold'>Rs.{coffeerate}</p></h2>
+            <h2 className="card-title">Sambar Podi!<p className='flex justify-end text-xl font-bold'>Rs.{coffeerate}</p></h2>
             <p>Feelig tired? Have some coffeee</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
@@ -288,7 +292,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='pp' src={pp} alt="pp" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Pastas!<p className='flex justify-end text-xl font-bold'>Rs.{pastarate}</p></h2>
+            <h2 className="card-title">Idli Molaga Podi!<p className='flex justify-end text-xl font-bold'>Rs.{pastarate}</p></h2>
             <p>Feels hungry? Teste some yummy pastas</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpenth}>Click here</button>
@@ -305,7 +309,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img src={rr} className='rr' alt="rr" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Rose Milk!<p className='flex justify-end text-xl font-bold'>Rs.{rosemilkrate}</p></h2>
+            <h2 className="card-title">Rasam Podi!<p className='flex justify-end text-xl font-bold'>Rs.{rosemilkrate}</p></h2>
             <p>Get chilled with some Rose Milk!!</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
@@ -325,8 +329,8 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='cc' src={brownie} alt="cc"/></figure>
           <div className="card-body">
-            <h2 className="card-title">Melting Brownie!<p className='flex justify-end text-xl font-bold'>Rs.{brownierate}</p></h2>
-            <p>Get melted with yummie brownies!!!</p>
+            <h2 className="card-title">Pulikachal!<p className='flex justify-end text-xl font-bold'>Rs.{brownierate}</p></h2>
+            <p>kovil prasadam at your homes!!!</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
             </div>
@@ -342,8 +346,8 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
         <figure><img className='cake w-full' src={cake} alt="pp" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Vegan Cake!<p className='flex justify-end text-xl font-bold'>Rs.{cakerate}</p></h2>
-            <p>Are you a vegan?Try out this delicious Vegan Cake!!</p>
+            <h2 className="card-title">Vathakuzhambhu!<p className='flex justify-end text-xl font-bold'>Rs.{cakerate}</p></h2>
+            <p>More than just a pickle,it's an experience!!!</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
             </div>
@@ -375,6 +379,25 @@ export default function Menu() {
         <button onClick={openBookPage} className='btn btn-success'>
           Place Order
         </button>
+      </div>
+      <div>
+        <footer className="footer footer-center p-10 bg-black text-red-500 rounded">
+          <nav className="fnav grid grid-flow-col gap-4">
+            <Link to={'/about'} className="link link-hover hover:text-white text-xl">About</Link>
+            <Link to={'/contact'} className="link link-hover hover:text-white text-xl">Contact</Link>
+            <Link to={'/team'} className="link link-hover hover:text-white text-xl">Team</Link>
+          </nav> 
+          <nav>
+            <div className="grid grid-flow-col gap-4">
+              <a href="https://www.instagram.com/innum_vai/"><img className='cursor-pointer' src={insta} alt='insta'/></a>
+              <a href='https://wa.me/9941269128'><img className='cursor-pointer' src={whatsapp} alt='insta'/></a>
+              <a href='mailto:innumvai@gmail.com'><img className='cursor-pointer' src={mail} alt='insta'/></a>
+            </div>
+          </nav> 
+          <aside>
+            <p>Copyright © 2024 - All right reserved by Innumvai</p>
+          </aside>
+        </footer>
       </div>
     </div>
   )

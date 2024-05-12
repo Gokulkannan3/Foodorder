@@ -9,4 +9,7 @@ body,html{
         font-size:15px !important;
         transform:translate(-20px) !important;
     }
+    .foot{
+        margin-top:50px;
+    }
 }
