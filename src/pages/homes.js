@@ -29,34 +29,34 @@ export default function Homes() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3002/countcoffee')
+    fetch('https://fback-vteb.onrender.com/countcoffee')
       .then(res => res.json())
       .then(data => {
         setCoffeeCount(data.totalCoffee);
       })
       .catch(error => console.error('Error fetching coffee count:', error));
 
-    fetch('http://localhost:3002/countpasta')
+    fetch('https://fback-vteb.onrender.com/countpasta')
       .then(res => res.json())
       .then(data => {
         setPastaCount(data.totalPasta);
       })
       .catch(error => console.error('Error fetching pasta count:', error));
-      fetch('http://localhost:3002/countrosemilk')
+      fetch('https://fback-vteb.onrender.com/countrosemilk')
       .then(res => res.json())
       .then(data => {
         setRosemilkCount(data.totalRosemilk);
       })
       .catch(error => console.error('Error fetching rosemilk count:', error));
 
-    fetch('http://localhost:3002/countbrownie')
+    fetch('https://fback-vteb.onrender.com/countbrownie')
       .then(res => res.json())
       .then(data => {
         setBrownieCount(data.totalBrownie);
       })
       .catch(error => console.error('Error fetching brownie count:', error));
       
-    fetch('http://localhost:3002/countcake')
+    fetch('https://fback-vteb.onrender.com/countcake')
       .then(res => res.json())
       .then(data => {
         setCakeCount(data.totalCake);
