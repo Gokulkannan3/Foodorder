@@ -157,7 +157,7 @@ export default function Homes() {
         </div>
       </div>
       <div className='flex justify-center'>
-        <div className='p-4 w-1/2 border-2 border-black rounded-lg mb-10'>
+        <div className='p-4 w-88 border-2 border-black rounded-lg mb-10'>
           <canvas ref={chartRef} />
         </div>
       </div>
