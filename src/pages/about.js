@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import Navbar from '../components/navbar';
+import Navbar from '../components/navi';
 import coffee from '../images/coffee.png';
 import pasta from '../images/pasta.png';
 import rosemilk from '../images/rosemilk.png'
