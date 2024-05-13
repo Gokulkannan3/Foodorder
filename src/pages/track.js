@@ -41,7 +41,7 @@ export default function Track() {
       <Navbar />
       <div className='flex justify-center mt-20'>
         <div className="co card card-side bg-red-200 shadow-xl w-1/2">
-          <figure className='w-1/2 fi'><img className='im' src={innumvai} alt="Movie" /></figure>
+          <figure className='w-1/2 fi'><img className='ime' src={innumvai} alt="Movie" /></figure>
           <div className="card-body flex justify-center">
             <h2 className="card-title font-extrabold">Order Details</h2>
             <p>Order Id : {orderDetails.id}</p>
