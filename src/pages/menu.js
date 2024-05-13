@@ -275,7 +275,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='cc' src={cc} alt="cc" onClick={handleOpen}/></figure>
           <div className="card-body">
-            <h2 className="card-title">Sambar Podi!<p className='flex justify-end text-xl font-bold'>Rs.{coffeerate}</p></h2>
+            <h2 className="card-title">Coffee!<p className='flex justify-end text-xl font-bold'>Rs.{coffeerate}</p></h2>
             <p>Feelig tired? Have some coffeee</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
@@ -292,7 +292,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='pp' src={pp} alt="pp" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Idli Molaga Podi!<p className='flex justify-end text-xl font-bold'>Rs.{pastarate}</p></h2>
+            <h2 className="card-title">Pasta!<p className='flex justify-end text-xl font-bold'>Rs.{pastarate}</p></h2>
             <p>Feels hungry? Teste some yummy pastas</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpenth}>Click here</button>
@@ -309,7 +309,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img src={rr} className='rr' alt="rr" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Rasam Podi!<p className='flex justify-end text-xl font-bold'>Rs.{rosemilkrate}</p></h2>
+            <h2 className="card-title">Rosemilk!<p className='flex justify-end text-xl font-bold'>Rs.{rosemilkrate}</p></h2>
             <p>Get chilled with some Rose Milk!!</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
@@ -329,7 +329,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='cc' src={brownie} alt="cc"/></figure>
           <div className="card-body">
-            <h2 className="card-title">Pulikachal!<p className='flex justify-end text-xl font-bold'>Rs.{brownierate}</p></h2>
+            <h2 className="card-title">Melting Brownie!<p className='flex justify-end text-xl font-bold'>Rs.{brownierate}</p></h2>
             <p>kovil prasadam at your homes!!!</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
@@ -346,7 +346,7 @@ export default function Menu() {
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
         <figure><img className='cake w-full' src={cake} alt="pp" /></figure>
           <div className="card-body">
-            <h2 className="card-title">Vathakuzhambhu!<p className='flex justify-end text-xl font-bold'>Rs.{cakerate}</p></h2>
+            <h2 className="card-title">Vegan Cake!<p className='flex justify-end text-xl font-bold'>Rs.{cakerate}</p></h2>
             <p>More than just a pickle,it's an experience!!!</p>
             <div className='translate-y-2'>
               <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
