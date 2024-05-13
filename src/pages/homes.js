@@ -1,25 +1,101 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/navi';
 import coffee from '../images/coffee.png';
 import pasta from '../images/pasta.png';
-import rosemilk from '../images/rosemilk.png'
-import './home.css'
+import rosemilk from '../images/rosemilk.png';
+import './home.css';
 import { Link } from 'react-router-dom';
 import cc from '../images/cc.png';
 import rr from '../images/rr.jpg';
-import './menu.css'
+import './menu.css';
 import { useNavigate } from 'react-router-dom';
 import insta from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
 import mail from '../images/envelope.png';
+import Chart from 'chart.js/auto';
 
 export default function Homes() {
   const navigate = useNavigate();
+  const chartRef = useRef(null);
+  const [coffeeCount, setCoffeeCount] = useState(0);
+  const [pastaCount, setPastaCount] = useState(0);
+  const [rosemilkCount, setRosemilkCount] = useState(0);
+  const [brownieCount, setBrownieCount] = useState(0);
+  const [cakeCount, setCakeCount] = useState(0);
+  const chartInstance = useRef(null);
 
-  const handleClick = ()=>{
-    navigate('/menu')
-  }
+  const handleClick = () => {
+    navigate('/menu');
+  };
+
+  useEffect(() => {
+    fetch('http://localhost:3002/countcoffee')
+      .then(res => res.json())
+      .then(data => {
+        setCoffeeCount(data.totalCoffee);
+      })
+      .catch(error => console.error('Error fetching coffee count:', error));
+
+    fetch('http://localhost:3002/countpasta')
+      .then(res => res.json())
+      .then(data => {
+        setPastaCount(data.totalPasta);
+      })
+      .catch(error => console.error('Error fetching pasta count:', error));
+      fetch('http://localhost:3002/countrosemilk')
+      .then(res => res.json())
+      .then(data => {
+        setRosemilkCount(data.totalRosemilk);
+      })
+      .catch(error => console.error('Error fetching rosemilk count:', error));
+
+    fetch('http://localhost:3002/countbrownie')
+      .then(res => res.json())
+      .then(data => {
+        setBrownieCount(data.totalBrownie);
+      })
+      .catch(error => console.error('Error fetching brownie count:', error));
+      
+    fetch('http://localhost:3002/countcake')
+      .then(res => res.json())
+      .then(data => {
+        setCakeCount(data.totalCake);
+      })
+      .catch(error => console.error('Error fetching cake count:', error));
+  }, []);
+
+  const renderChart = () => {
+    const ctx = chartRef.current.getContext('2d');
+    if (chartInstance.current) {
+      chartInstance.current.destroy();
+    }
+
+    chartInstance.current = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Coffee', 'Pasta', 'Rose Milk', 'Brownie', 'Cake'],
+        datasets: [
+          {
+            label: 'Maximum Orders',
+            backgroundColor: ['#FF6384', 'green', 'yellow', 'gray', 'blue'],
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1,
+            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+            hoverBorderColor: 'rgba(255,99,132,1)',
+            data: [coffeeCount, pastaCount, rosemilkCount, brownieCount, cakeCount]
+          }
+        ]
+      },
+      options: {
+        maintainAspectRatio: false
+      }
+    });
+  };
   
+  useEffect(() => {
+    renderChart();
+  }, [renderChart]);
+
   return (
     <div>
       <Navbar/>
@@ -78,6 +154,11 @@ export default function Homes() {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className='flex justify-center'>
+        <div className='p-4 w-1/2 border-2 border-black rounded-lg mb-10'>
+          <canvas ref={chartRef} />
         </div>
       </div>
       <div>
