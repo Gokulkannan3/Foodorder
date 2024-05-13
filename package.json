@@ -15,7 +15,7 @@
     "chart.js": "^4.4.2",
     "git-ignore": "^0.0.2",
     "lottie-react": "^2.4.0",
-    "node": "^21.7.0",
+    "node": "^20.13.1",
     "nodemailer": "^6.9.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
