@@ -45,11 +45,11 @@ export default function Book() {
         orderDetails[`${item.name.toLowerCase()}`] = item.count;
       });
   
-      const response = await axios.post('http://localhost:3002/order', orderDetails);
+      const response = await axios.post('https://fback-vteb.onrender.com/order', orderDetails);
   
       if (response.status === 200) {
         console.log('Order placed successfully!');
-        axios.get(`http://localhost:3002/order?username=${userData.username}`)
+        axios.get(`https://fback-vteb.onrender.com/order?username=${userData.username}`)
           .then((res) => {
             const latestOrder = res.data[res.data.length - 1];
             const orderId = latestOrder.id;
