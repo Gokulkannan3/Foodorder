@@ -7,6 +7,10 @@ import './track.css';
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import tick from '../images/checkmark.png';
+import insta from '../images/instagram.png';
+import whatsapp from '../images/whatsapp.png';
+import mail from '../images/envelope.png';
+import { Link } from 'react-router-dom';
 
 export default function Track() {
   const { id } = useParams();
@@ -78,6 +82,25 @@ export default function Track() {
           ))}
         </ProgressBar>
       </div>
+      </div>
+      <div className='foot mt-10'>
+        <footer className="footer footer-center p-10 bg-black text-red-500 rounded">
+          <nav className="fnav grid grid-flow-col gap-4">
+            <Link to={'/about'} className="link link-hover hover:text-white text-xl">About</Link>
+            <Link to={'/contact'} className="link link-hover hover:text-white text-xl">Contact</Link>
+            <Link to={'/team'} className="link link-hover hover:text-white text-xl">Team</Link>
+          </nav> 
+          <nav>
+            <div className="grid grid-flow-col gap-4">
+              <a href="https://www.instagram.com/innum_vai/"><img className='cursor-pointer' src={insta} alt='insta'/></a>
+              <a href='https://wa.me/9941269128'><img className='cursor-pointer' src={whatsapp} alt='insta'/></a>
+              <a href='mailto:innumvai@gmail.com'><img className='cursor-pointer' src={mail} alt='insta'/></a>
+            </div>
+          </nav> 
+          <aside>
+            <p>Copyright © 2024 - All right reserved by Innumvai</p>
+          </aside>
+        </footer>
       </div>
     </div>
   );

@@ -148,7 +148,7 @@ export default function Login() {
       </div>
       {loginStatus && <button onClick={userauth}>Check</button>}
     </div>
-    <div className='foot mt-10'>
+      <div className='foot mt-10'>
         <footer className="footer footer-center p-10 bg-black text-red-500 rounded">
           <nav className="fnav grid grid-flow-col gap-4">
             <Link to={'/about'} className="link link-hover hover:text-white text-xl">About</Link>
