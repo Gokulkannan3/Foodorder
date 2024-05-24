@@ -12,4 +12,9 @@ body,html{
     .foot{
         margin-top:50px;
     }
+    .lot{
+        width:300px !important;
+        height:300px !important;
+        transform:translatex(10px) !important;
+    }
 }
