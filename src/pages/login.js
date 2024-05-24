@@ -11,7 +11,8 @@ import insta from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
 import mail from '../images/envelope.png';
 import './login.css';
-
+import './Sig.css'
+import Modal from 'react-modal';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -20,6 +21,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [loginStatus, setLoginStatus] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleTogglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -37,11 +39,15 @@ export default function Login() {
         setLoginStatus(false);
         setShowPopup(true);
       } else {
+        setModalIsOpen(true);
         setLoginStatus(true);
         const { token, result } = response.data;
         localStorage.setItem('token', token);
         localStorage.setItem('userData', JSON.stringify(result));
-        navigate('/home');
+        setTimeout(() => {
+          navigate('/home');
+          setModalIsOpen(false);
+        }, 10000);
       }
     } catch (error) {
       console.error('An unexpected error occurred:', error.message);
@@ -167,6 +173,36 @@ export default function Login() {
           </aside>
         </footer>
       </div>
+      <div className='flex justify-center items-center'>
+          <Modal
+            isOpen={modalIsOpen}
+            contentLabel="Registration Success Modal"
+            ariaHideApp={false}
+            className='flex justify-center items-center content-center h-screen w-screen fixed top-0 left-0'
+            overlayClassName='fixed inset-0 bg-gray-500 bg-opacity-75'
+          >
+            <div className='lot flex justify-center items-center content-center h-96 w-96 bg-black p-4 rounded-md'>
+              <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+                <div class="wheel"></div>
+                <div class="hamster">
+                  <div class="hamster__body">
+                    <div class="hamster__head">
+                      <div class="hamster__ear"></div>
+                      <div class="hamster__eye"></div>
+                      <div class="hamster__nose"></div>
+                    </div>
+                    <div class="hamster__limb hamster__limb--fr"></div>
+                    <div class="hamster__limb hamster__limb--fl"></div>
+                    <div class="hamster__limb hamster__limb--br"></div>
+                    <div class="hamster__limb hamster__limb--bl"></div>
+                    <div class="hamster__tail"></div>
+                  </div>
+                </div>
+                <div class="spoke"></div>
+              </div>
+            </div>
+          </Modal>
+        </div>
     </Box>
     
   );

@@ -60,7 +60,7 @@ export default function Team() {
                 <img alt="Remy Sharp" src={gokul} className='im rounded-full h-10'/>
               </div>
               <div className='te'>
-                <p className='text-xl font-black'>Web Developer</p>
+                <p className='text-xl font-black'>Fullstack Web Developer</p>
                 <p className='text-lg'>Gokul Kannan</p>
               </div>
             </div>
