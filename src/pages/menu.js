@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navi from '../components/navi';
+import ccr from '../images/ccr.png'
+import cb from '../images/cb.png'
 import cc from '../images/cc.png';
 import plus from '../images/plus.png';
 import minus from '../images/minus.png';
@@ -22,6 +24,7 @@ import { Link } from 'react-router-dom';
 import insta from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
 import mail from '../images/envelope.png';
+import { CardBody, CardContainer, CardItem } from "../@/components/ui/3d-card"
 
 const style = {
   position: 'absolute',
@@ -271,6 +274,42 @@ export default function Menu() {
         </div> 
         </Box>
       </Modalo>
+
+      <CardContainer className="w-96 h-96 bg-red-200 shadow-2xl rounded-xl">
+        <CardBody className={"flex flex-col items-center"}>
+          <div className='bg-blue-500 mt-4 rounded-xl w-64 flex items-center justify-center'>
+            <CardItem translateZ={100} className="flex justify-center w-full mt-4">
+            <img
+                  height="1000"
+                  width="1000"
+                  className="ccc h-60 w-64 object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                  src={ccr}
+                />
+                
+            </CardItem>
+          </div>
+          <CardItem className="mt-2" translateZ={20}>
+            <div className='p-2 -translate-x-16'>
+              <h2 className="card-title">
+                Coffee!
+                <p className="flex justify-end text-xl translate-x-52 font-bold text-right">Rs.{coffeerate}</p>
+              </h2>
+              <p className="-translate-y-1">Feeling tired? Have some coffee</p>
+            </div>
+            <button variant="outlined" className="w-24 -translate-x-14 -translate-y-2 border-2 border-blue-800 rounded-md text-lg text-blue-800" onClick={handleOpen}>
+              Click here
+            </button>
+          </CardItem>
+          <div className="bu card-actions flex justify-end -translate-y-12 translate-x-32 ml-4">
+            <button className="btn flex bg-red-500 hover:bg-red-500">
+              <img src={minus} alt="minus" className="minus cursor-pointer" onClick={() => handleRemoveFromCart(0)} />
+              <p className="font-black">{cartCounts[0]}</p>
+              <img src={plus} alt="plus" className="plus cursor-pointer" onClick={() => handleAddToCart(0)} />
+            </button>
+          </div>
+        </CardBody>
+      </CardContainer>
       <div className='car flex justify-center items-center mt-10 gap-10 mb-10'>
         <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
           <figure><img className='cc' src={cc} alt="cc" onClick={handleOpen}/></figure>

@@ -13,18 +13,24 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^1.6.3",
     "chart.js": "^4.4.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.4",
     "git-ignore": "^0.0.2",
     "lottie-react": "^2.4.0",
+    "lucide-react": "^0.451.0",
     "node": "^20.13.1",
     "nodemailer": "^6.9.13",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "react-step-progress-bar": "^1.0.3",
     "styled-components": "^6.1.8",
-    "tailwindcss": "^3.3.6",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss": "^3.4.13",
+    "tailwindcss-animate": "^1.0.7",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -52,6 +58,12 @@
     ]
   },
   "devDependencies": {
-    "daisyui": "^4.4.19"
-  }
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.4.19",
+    "postcss": "^8.4.47"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Gokulkannan3/foodorder",
+  "author": "GOKUL-KANNAN-P <gokulkannanp.cse2021@citchennai.net>",
+  "license": "MIT"
 }

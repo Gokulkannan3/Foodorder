@@ -38,6 +38,9 @@
         margin: 0 auto !important;
         align-items: center !important;
     }
+    .ccc{
+        width:250px !important;
+    }
     .cc{
         height:350px !important;
         width:500px !important;
