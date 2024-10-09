@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navi from '../components/navi';
 import ccr from '../images/ccr.png'
-import cb from '../images/cb.png'
-import cc from '../images/cc.png';
 import plus from '../images/plus.png';
 import minus from '../images/minus.png';
-import pp from '../images/pp.jpg';
-import rr from '../images/rr.jpg';
+import pp from '../images/ppr.png';
+import rr from '../images/rmr.png';
 import brownie from '../images/brownie.jpg';
 import cake from '../images/cake.jpg';
 import './menu.css'
@@ -274,94 +272,107 @@ export default function Menu() {
         </div> 
         </Box>
       </Modalo>
-
-      <CardContainer className="w-96 h-96 bg-red-200 shadow-2xl rounded-xl">
-        <CardBody className={"flex flex-col items-center"}>
-          <div className='bg-blue-500 mt-4 rounded-xl w-64 flex items-center justify-center'>
-            <CardItem translateZ={100} className="flex justify-center w-full mt-4">
-            <img
+      <div className='car flex justify-center items-center mt-10 gap-10 mb-10'>
+        <CardContainer className="w-96 h-96 bg-red-200 shadow-2xl rounded-xl">
+          <CardBody className={"flex flex-col items-center"}>
+            <div className='bg-blue-500 mt-4 rounded-xl w-64 flex items-center justify-center'>
+              <CardItem translateZ={100} className="flex justify-center w-full mt-4">
+              <img
+                    height="1000"
+                    width="1000"
+                    className="ccc h-60 w-64 object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                    src={ccr}
+                  />
+              </CardItem>
+            </div>
+            <CardItem className="mt-2" translateZ={20}>
+              <div className='p-2 -translate-x-16'>
+                <h2 className="card-title">
+                  Coffee!
+                  <p className="flex justify-end text-xl translate-x-52 font-bold text-right">Rs.{coffeerate}</p>
+                </h2>
+                <p className="-translate-y-1">Feeling tired? Have some coffee</p>
+              </div>
+              <button variant="outlined" className="w-24 -translate-x-14 -translate-y-2 border-2 border-blue-800 rounded-md text-lg text-blue-800" onClick={handleOpen}>
+                Click here
+              </button>
+            </CardItem>
+            <div className="bu card-actions flex justify-end -translate-y-12 translate-x-32 ml-4">
+              <button className="btn flex bg-red-500 hover:bg-red-500">
+                <img src={minus} alt="minus" className="minus cursor-pointer" onClick={() => handleRemoveFromCart(0)} />
+                <p className="font-black">{cartCounts[0]}</p>
+                <img src={plus} alt="plus" className="plus cursor-pointer" onClick={() => handleAddToCart(0)} />
+              </button>
+            </div>
+          </CardBody>
+        </CardContainer>
+        <CardContainer className="w-96 h-96 bg-red-200 shadow-2xl rounded-xl">
+          <CardBody className={"flex flex-col items-center"}>
+            <div className='bg-blue-500 mt-4 rounded-xl w-72 h-96 flex items-center justify-center'>
+              <CardItem translateZ={100} className="flex justify-center h-full w-full mt-4">
+                <img
                   height="1000"
                   width="1000"
-                  className="ccc h-60 w-64 object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                  src={ccr}
+                  className='pp h-56 object-cover rounded-xl group-hover/card:shadow-xl' src={pp} alt="pp"
                 />
-                
+              </CardItem>
+            </div>
+            <CardItem className="mt-2" translateZ={20}>
+              <div className='p-2 translate-y-3 -translate-x-16'>
+                <h2 className="card-title">
+                  Pasta!
+                  <p className="flex justify-end text-xl translate-x-52 font-bold text-right">Rs.{pastarate}</p>
+                </h2>
+                <p className="-translate-y-1">Feels hungry? Taste Yummy pastas</p>
+              </div>
+              <button variant="outlined" className='w-24 border-2 border-blue-800 translate-y-2 -translate-x-12 rounded-md text-lg text-blue-800' onClick={handleOpenth}>
+                Click here
+              </button>
             </CardItem>
-          </div>
-          <CardItem className="mt-2" translateZ={20}>
-            <div className='p-2 -translate-x-16'>
-              <h2 className="card-title">
-                Coffee!
-                <p className="flex justify-end text-xl translate-x-52 font-bold text-right">Rs.{coffeerate}</p>
-              </h2>
-              <p className="-translate-y-1">Feeling tired? Have some coffee</p>
-            </div>
-            <button variant="outlined" className="w-24 -translate-x-14 -translate-y-2 border-2 border-blue-800 rounded-md text-lg text-blue-800" onClick={handleOpen}>
-              Click here
-            </button>
-          </CardItem>
-          <div className="bu card-actions flex justify-end -translate-y-12 translate-x-32 ml-4">
-            <button className="btn flex bg-red-500 hover:bg-red-500">
-              <img src={minus} alt="minus" className="minus cursor-pointer" onClick={() => handleRemoveFromCart(0)} />
-              <p className="font-black">{cartCounts[0]}</p>
-              <img src={plus} alt="plus" className="plus cursor-pointer" onClick={() => handleAddToCart(0)} />
-            </button>
-          </div>
-        </CardBody>
-      </CardContainer>
-      <div className='car flex justify-center items-center mt-10 gap-10 mb-10'>
-        <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
-          <figure><img className='cc' src={cc} alt="cc" onClick={handleOpen}/></figure>
-          <div className="card-body">
-            <h2 className="card-title">Coffee!<p className='flex justify-end text-xl font-bold'>Rs.{coffeerate}</p></h2>
-            <p>Feelig tired? Have some coffeee</p>
-            <div className='translate-y-2'>
-              <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
-            </div>
-            <div className="bu card-actions flex justify-end ">
-              <button className='btn flex bg-red-500 hover:bg-red-500'>
-                <img src={minus} alt='plus' className='plus cursor-pointer' onClick={()=>handleRemoveFromCart(0)}/>
-                <p className='font-black'>{cartCounts[0]}</p>
-                <img src={plus} alt='plus' className='minus cursor-pointer' onClick={()=>handleAddToCart(0)}/>
+            <div className="card-actions flex justify-end -translate-y-8 translate-x-32 ml-4">
+              <button className="bu1 btn flex bg-red-500 hover:bg-red-500">
+                <img src={minus} alt="minus" className="minus cursor-pointer" onClick={() => handleRemoveFromCart(1)} />
+                <p className="font-black">{cartCounts[1]}</p>
+                <img src={plus} alt="plus" className="plus cursor-pointer" onClick={() => handleAddToCart(1)} />
               </button>
             </div>
-          </div>
-        </div>
-        <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
-          <figure><img className='pp' src={pp} alt="pp" /></figure>
-          <div className="card-body">
-            <h2 className="card-title">Pasta!<p className='flex justify-end text-xl font-bold'>Rs.{pastarate}</p></h2>
-            <p>Feels hungry? Teste some yummy pastas</p>
-            <div className='translate-y-2'>
-              <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpenth}>Click here</button>
+          </CardBody>
+        </CardContainer>
+        <CardContainer className="w-96 h-96 bg-red-200 shadow-2xl rounded-xl">
+          <CardBody className={"flex flex-col items-center"}>
+            <div className='bg-black mt-4 rounded-xl w-64 flex items-center justify-center'>
+              <CardItem translateZ={100} className="flex justify-center w-full mt-4">
+              <img
+                    height="1000"
+                    width="1000"
+                    className="ccc h-60 w-64 object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                    src={rr}
+                  />
+              </CardItem>
             </div>
-            <div className="bu card-actions flex justify-end ">
-              <button className='btn flex bg-red-500 hover:bg-red-500'>
-                <img src={minus} alt='plus' className='minus cursor-pointer' onClick={()=>handleRemoveFromCart(1)}/>
-                <p className='font-black'>{cartCounts[1]}</p>
-                <img src={plus} alt='plus' className='plus cursor-pointer' onClick={()=>handleAddToCart(1)}/>
+            <CardItem className="mt-2" translateZ={20}>
+              <div className='p-2 -translate-x-16'>
+                <h2 className="card-title">
+                  Rosemilk!
+                  <p className="flex justify-end text-xl translate-x-52 font-bold text-right">Rs.{rosemilkrate}</p>
+                </h2>
+                <p className="-translate-y-1">Get chilled with some Rose Milk!!</p>
+              </div>
+              <button variant="outlined" className="w-24 -translate-x-14 -translate-y-2 border-2 border-blue-800 rounded-md text-lg text-blue-800" onClick={handleOpen}>
+                Click here
+              </button>
+            </CardItem>
+            <div className="bu card-actions flex justify-end -translate-y-12 translate-x-32 ml-4">
+              <button className="btn flex bg-red-500 hover:bg-red-500">
+                <img src={minus} alt="minus" className="minus cursor-pointer" onClick={() => handleRemoveFromCart(2)} />
+                <p className="font-black">{cartCounts[2]}</p>
+                <img src={plus} alt="plus" className="plus cursor-pointer" onClick={() => handleAddToCart(2)} />
               </button>
             </div>
-          </div>
-        </div>
-        <div className="card card-compact w-96 h-96 bg-red-200 shadow-2xl">
-          <figure><img src={rr} className='rr' alt="rr" /></figure>
-          <div className="card-body">
-            <h2 className="card-title">Rosemilk!<p className='flex justify-end text-xl font-bold'>Rs.{rosemilkrate}</p></h2>
-            <p>Get chilled with some Rose Milk!!</p>
-            <div className='translate-y-2'>
-              <button variant="outlined" className='w-24 border-2 border-blue-800 rounded-md text-lg text-blue-800' onClick={handleOpen}>Click here</button>
-            </div>
-            <div className="bu card-actions flex justify-end ">
-              <button className='btn flex bg-red-500 hover:bg-red-500'>
-                <img src={minus} alt='plus' className='minus cursor-pointer' onClick={()=>handleRemoveFromCart(2)}/>
-                <p className='font-black'>{cartCounts[2]}</p>
-                <img src={plus} alt='plus' className='plus cursor-pointer' onClick={()=>handleAddToCart(2)}/>
-              </button>
-            </div>
-          </div>
-        </div>
+          </CardBody>
+        </CardContainer>
       </div>
       <hr className='border-t border-transparent'></hr>
       <div className='ca flex justify-center items-center mt-10 gap-10 mb-20'>

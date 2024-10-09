@@ -46,8 +46,8 @@
         width:500px !important;
     }
     .pp{
-        height:250px !important;
-        width:500px !important;
+        height:200px !important;
+        width:400px !important;
     }
     .rr{
         height:250px !important;
@@ -56,6 +56,13 @@
     .bu{
         display:flex !important;
         align-items:center !important;
+    }
+    .bu1{
+        display:flex !important;
+        align-items:center !important;
+        transform: translateY(25px) !important;
+        /* transform: translatex(10px) !important; */
+        margin-right:2px;
     }
     .plus{
         width:25% !important;
