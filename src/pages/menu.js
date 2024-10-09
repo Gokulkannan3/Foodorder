@@ -275,12 +275,12 @@ export default function Menu() {
       <div className='car flex justify-center items-center mt-10 gap-10 mb-10'>
         <CardContainer className="w-96 h-96 bg-red-200 shadow-2xl rounded-xl">
           <CardBody className={"flex flex-col items-center"}>
-            <div className='bg-blue-500 mt-4 rounded-xl w-64 flex items-center justify-center'>
+            <div className='bg-blue-500 mt-4 rounded-xl w-72 h-64 flex items-center justify-center'>
               <CardItem translateZ={100} className="flex justify-center w-full mt-4">
               <img
                     height="1000"
                     width="1000"
-                    className="ccc h-60 w-64 object-cover rounded-xl group-hover/card:shadow-xl"
+                    className="ccc h-96 w-64 translate-x-3 object-cover rounded-xl group-hover/card:shadow-xl"
                     alt="thumbnail"
                     src={ccr}
                   />
